@@ -1,0 +1,141 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+}
+
+/* headers and nav */
+
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    letter-spacing: 18px;
+}
+
+h2, h3 {
+    text-align: center; 
+} 
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto; 
+}
+
+nav ul li {
+    list-style-type: none;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* setting all div containers to flex */
+
+.intro .flex-container, #about-me .flex-container, #projects .flex-container, #contact .flex-container {
+    display: flex;
+    flex-direction: column;
+    margin: 8px; 
+}
+
+/* contact form */
+
+form {
+    width: 100%;
+}
+
+form label {
+    display: block;
+    padding: 5px 0;
+}
+
+form button {
+    margin: 5px 0;
+    padding: 3px;
+}
+
+form textarea {
+    height: 200px; 
+    width: 100%;
+}
+
+/* miscellaneous */
+
+.item {
+    margin: 5px;
+} 
+
+.intro img, #about-me img, #projects img {
+    width: 100%;
+}
+
+#about-me, #contact, nav ul {
+    background-color: #F06543; 
+}
+
+#contact {
+    padding-bottom: 10px;
+}
+
+#contact span {
+    display: block;
+}
+
+#contact h2 {
+    padding: 15px 0;
+}
+
+/* media query */
+
+@media all and (min-width: 600px) {
+    .intro .flex-container, #about-me .flex-container, #projects .flex-container, #contact .flex-container {
+        flex-direction: row;
+        flex: 1; 
+        justify-content: space-evenly;
+    }
+    
+    #projects .flex-container .item {
+        /* justify-content: center; */
+        width: 100%; 
+        padding: 3px;
+    }
+    
+
+    nav ul li {
+        margin: 10px 30px;
+        /* or width */
+        /* flex: 1; */
+    }
+
+    .h2-left {
+        text-align: left;
+    }
+
+    #contact .item {
+        width: 100%;
+    } 
+
+    #contact textarea {
+        width: 100%;
+    }
+
+}
